@@ -1,0 +1,14 @@
+extends layout
+
+block content   
+    h1.title.has-text-centered.mt-5 Real Time Chat-Site
+    h2.subtitle.is-4.has-text-centered.new-line
+        | This is a testing app to demostrate the usage of Socket IO. Enter your
+        | name and click submit. Open a new tab with the same URL and enter another
+        | name. Try talking to each other!
+    .container
+        form.field(action="/chat")
+            label.label Name
+            .control
+                input.input(type='text' name="username" placeholder='Enter your name' pattern='.{3,}' autofocus title='Must be at least 3 characters' required='' autocomplete="off")
+            button.button.is-link.mt-3 Submit

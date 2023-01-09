@@ -1,0 +1,19 @@
+extends layout
+
+block append head
+    script(type="text/javascript" src="/js/script.js") 
+    script(src='https://cdn.socket.io/4.5.4/socket.io.min.js' integrity='sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI' crossorigin='anonymous')
+block content
+    .container.is-fluid
+        section.hero.is-fullheight.has-background-grey-lighter
+            h1.title.has-text-centered.mt-3 Welcome to the Chat Site!
+                .column.is-3.message-container                    
+            form.field.chat-form(method="post")
+                label.label
+                .control.is-5.column
+                    input.input.is-medium(placeholder='Enter Message...' name='msg' pattern='.{2,}' title='Must be at least 2 characters' autocomplete='off' required='' autofocus)
+                .field.is-grouped
+                    .control
+                    button.button.is-link Submit
+                    .control
+                    button.button.is-link.is-light.clear Clear
