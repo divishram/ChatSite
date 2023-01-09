@@ -6,7 +6,7 @@ An example of a Real Time chat site built with Node.js, Express, Socket.io, and 
 
 ## Demo
 
-Insert gif or link to demo
+![](demo.gif)
 
 
 ## Run Locally
